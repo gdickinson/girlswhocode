@@ -13,7 +13,7 @@ var getOneOrTheOther = function(one, theOther) {
 
 // The code outside of the draw() function is executed ONCE
 // at start time. These variables are available for use
-// inside the draw() function (we call them "global" 
+// inside the draw() function (we call them "global"
 // because they are available everywhere).
 
 // The starting coordinates of our circle
@@ -22,7 +22,7 @@ var circleY = random(0, 400);
 
 // The starting 'direction' of our circle. In other words,
 // how much each coordinate will change with each re-draw
-// of the screen. A better name might be 'speed' or 'velocity'. 
+// of the screen. A better name might be 'speed' or 'velocity'.
 var directionX = -1;
 var directionY = -1;
 
@@ -30,7 +30,7 @@ var directionY = -1;
 var draw = function() {
   // Clear the screen by drawing a white background
   background(255, 255, 255);
-  
+
   // Check if our circle is at the edge of the screen. If it is,
   // change the direction appropriately.
   if (circleX >= 400) {
@@ -40,9 +40,9 @@ var draw = function() {
   } else if (circleY >= 400) {
     directionY = getOneOrTheOther(-0.9, -0.1);
   } else if (circleY <= 0) {
-    directionY = getOneOrTheOther(0.1, 0.9);
+    direct ionY = getOneOrTheOther(0.1, 0.9);
   }
-  
+
   // Change the position of the circle based on the direction
   // it is currently traveling.
   circleX += directionX;
